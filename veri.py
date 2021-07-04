@@ -17,7 +17,7 @@ filmtablosu = (gelen_veri[0].contents)[len(gelen_veri[0].contents) -2 ]#gelen_ve
 filmtablosu = filmtablosu.find_all("tr")#tbody içinde tryi seçiyoruz
 
 for film in filmtablosu:#döngü
-    filmbasliklari = film.find_all("td",{"class":"titleColumn"})#Başlıları alıyoruz,'film' heryeri geizyor
+    filmbasliklari = film.find_all("td",{"class":"titleColumn"})#Başlıkları alıyoruz,'film' heryeri geizyor
     rating = film.find_all("td",{"class":"ratingColumn"})#IMDB Puanını alıyoruz.
     
     filmismi = filmbasliklari[0].text.replace("\n","")#text halini alıyoruz,liste 1 elemanlı olduğu için 0.indexten başlıyoruz burada aslında her eleman bir 'film',bu sebeple tek tek film isimlerini göreceğiz.
