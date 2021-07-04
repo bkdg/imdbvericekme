@@ -7,7 +7,7 @@ except ImportError:
 imdb = 'https://www.imdb.com/chart/top/'#link
 r = requests.get(imdb)#site ile bağlantı
 
-soup  = BeautifulSoup(r.content,"html.parser") #site kaynağını görüntülüyor(binevi öğreyi denetle)
+soup  = BeautifulSoup(r.content,"html.parser") #site kaynağını görüntülüyor(binevi öğeyi denetle)
 
 gelen_veri = soup.find_all("table",{"class":"chart full-width"})#site kaynağında "table class chart full-width" arıyor.
 
